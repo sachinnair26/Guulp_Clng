@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 
 export const SingleCard = styled.View `
-width:40%;
+width:100%;
 height:auto;
 margin:10px;
 display:flex;
