@@ -1,6 +1,6 @@
 import React from 'react'
 import { View,Text,FlatList} from 'react-native'
-import { Description,SingleElement,Heading,HeadingStyle,Icon} from './DishesStyled';
+import { Price,Cost,Name,NameAndDescription,Description,SingleElement,Heading,HeadingStyle,Icon} from './DishesStyled';
 const DishesPresentational = (props) =>{
     console.log(props);
     
@@ -12,10 +12,15 @@ const DishesPresentational = (props) =>{
         renderItem={({ item }) =>
         <SingleElement>
         <Icon  source={{uri:item.image}}></Icon>
-        <View>
-        <Text>{item.name}</Text>
+        <NameAndDescription>
+        <Name>{item.name}</Name>
         <Description ellipsizeMode='tail' textBreakStrategy='balanced' numberOfLines={1}>{item.description}</Description>
-        </View>
+        </NameAndDescription>
+        <Cost>
+          <Price>
+          ${item.price}
+          </Price>
+        </Cost>
         </SingleElement>
         }
         keyExtractor={item => item.id}
