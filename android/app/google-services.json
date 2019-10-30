@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "167174121160",
+    "firebase_url": "https://sachin-42fdd.firebaseio.com",
+    "project_id": "sachin-42fdd",
+    "storage_bucket": "sachin-42fdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167174121160:android:20232b40322c357bdf67fd",
+        "android_client_info": {
+          "package_name": "com.guulp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167174121160-1fh3vtbvbbnctdm7ah9bij95j1cps74d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmZOof9M4bcHSxK8YBeJoO1FQShzLbPik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167174121160-1fh3vtbvbbnctdm7ah9bij95j1cps74d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
