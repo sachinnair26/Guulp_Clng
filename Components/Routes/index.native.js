@@ -7,6 +7,7 @@ function Routes(){
         <Router>
             <Switch>
                 <Route path='/' component={Menu}/>
+                <Route path='/:dish' component={}/>
             </Switch>
         </Router>
     )

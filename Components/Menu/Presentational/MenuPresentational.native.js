@@ -7,7 +7,7 @@ const MenuPresentational = (props) => {
             <Heading><HeadingStyle>Menu</HeadingStyle></Heading>
             <WholeMenu>
                 {Object.keys(props.menu).map(single_menu => (
-                    <SingleCard>
+                    <SingleCard key={single_menu}>
                     <MenuItem>{single_menu}</MenuItem>
                     <Cover  source={{uri:props.menu[single_menu].Cover}}/>
                     </SingleCard>

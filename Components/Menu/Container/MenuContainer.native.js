@@ -1,25 +1,28 @@
 import React from 'react';
 import MenuPresentational from '../Presentational/MenuPresentational.native';
-import {database} from 'react-native-firebase'
-
-class MenuContainer extends React.Component{
-    constructor(props){
+import { connect } from 'react-redux';
+import FetchMenuAction from '../../Action/FetchMenuAction';
+class MenuContainer extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
-            menu:{}
+
         }
     }
-    componentDidMount(){
-       database().ref('Menu').on('value',(lic)=>{
-         
-        this.setState({menu:lic.val()})
-       })
+    componentDidMount() {
+        this.props.FetchMenuAction()
     }
-    render(){
-        return(
+    render() {
+        return (
 
-            <MenuPresentational menu={this.state.menu}/>
+            <MenuPresentational menu={this.props.menu} />
         )
     }
 }
-export default MenuContainer
+const mapStateToProps = state => ({
+    menu:state.FetchMenuReducer
+})
+const mapActionToProps = {
+    FetchMenuAction: FetchMenuAction
+}
+export default connect(mapStateToProps, mapActionToProps)(MenuContainer)
