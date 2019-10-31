@@ -32,23 +32,31 @@ class SelectedDishContainer extends Component {
     }
 
 onChangeSize = (a) =>{
-    console.log(a,this.state.size);
     
     this.setState({size:a})
-    this.calculatePrice()
 }
 onChangeAddon = (b) =>{
-    this.setState({addon:b})
-    this.calculatePrice()
+    if(this.state.addon === b){
+        this.setState({addon:''})
+    }else{
+        this.setState({addon:b})
+
+    }
 }
 calculatePrice = () =>{
+    
     var initial_price = this.state.selected_dish.price
     var size_price = this.state.selected_dish.size[this.state.size]
     var addon_price = this.state.addon !== '' ?  this.state.selected_dish.addons[this.state.addon] : 0
     var total_price = (initial_price+size_price+addon_price)*this.state.count
     this.setState({price:total_price})
 }
-
+componentDidUpdate(props,state){
+    if(state.count !== this.state.count || state.addon !== this.state.addon || state.size !== this.state.size){
+        this.calculatePrice()
+    }
+    
+}
 changeCount = (value) =>{
     this.setState({count:value ==='inc'? this.state.count+1 : this.state.count-1})
 }

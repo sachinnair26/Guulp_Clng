@@ -70,3 +70,14 @@ margin:2px;
 background-color:pink;
 border-radius:20px;
 `
+export const Price = styled.Text `
+font-size:18px;
+color:grey;
+`
+export const NameAndPrice = styled.View `
+width:100%;
+display:flex;
+justify-content:space-between;
+flex-direction:row;
+padding:10px;
+`

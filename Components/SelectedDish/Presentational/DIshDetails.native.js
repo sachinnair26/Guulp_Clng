@@ -1,11 +1,14 @@
 import React from 'react';
-import { SelectorValues, SingleSelectorValue, SelectorPageMain, SingleSelectorValueSelected, ExtraHeading, DishName, Description } from './SelectedDishStyled';
+import { SelectorValues, SingleSelectorValue, SelectorPageMain,Price,SingleSelectorValueSelected, ExtraHeading, DishName, Description, NameAndPrice } from './SelectedDishStyled';
 import { View, Text } from 'react-native';
 
 const DishDetails = (props) => {
     return (
         <View>
+            <NameAndPrice>
             <DishName>{props.selected_dish.name}</DishName>
+            <Price>${props.price}</Price>
+            </NameAndPrice>
             <Description>{props.selected_dish.description}</Description>
             <SelectorValues>
                 <ExtraHeading>
