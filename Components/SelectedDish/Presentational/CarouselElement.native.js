@@ -4,7 +4,6 @@ const { width,height } = Dimensions.get('window');
 import Carousel,{Pagination} from 'react-native-snap-carousel';
 import {Img} from './SelectedDishStyled';
  const CarouselElement = (props) =>{
-     console.log();
      
    const ENTRIES1 = [
         {

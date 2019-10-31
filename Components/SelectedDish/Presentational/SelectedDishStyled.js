@@ -65,3 +65,8 @@ background-color:green;
 padding:20px;
 margin:30px;
 `
+export const SingleSelectorValueSelected = styled.TouchableOpacity `
+margin:2px;
+background-color:pink;
+border-radius:20px;
+`

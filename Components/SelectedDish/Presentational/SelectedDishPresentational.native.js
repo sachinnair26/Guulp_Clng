@@ -5,8 +5,6 @@ import { SelectorValues, SingleSelectorValue, SelectorPageMain, ExtraHeading, Di
 import DishDetails from './DIshDetails.native';
 import QuantitySelector from './QuantitySelector.native';
 const SelectedDishPresentational = (props) =>{
-    console.log("here",props);
-    
     return(
         <SelectorPageMain>
         <CarouselElement image={props.selected_dish['image']}/>

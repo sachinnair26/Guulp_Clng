@@ -11,7 +11,7 @@ const DishesPresentational = (props) =>{
         <FlatList
         data={props.Dishes}
         renderItem={({ item }) =>
-        <Link to={`${props.param}/${item.name}`}><SingleElement>
+        <SingleElement onPress={()=>{props.history.push(`${props.param}/${item.name}`),props.SelectDishAction(item)}}>
         <Icon  source={{uri:item.image}}></Icon>
         <NameAndDescription>
         <Name>{item.name}</Name>
@@ -22,7 +22,7 @@ const DishesPresentational = (props) =>{
           ${item.price}
           </Price>
         </Cost>
-        </SingleElement></Link>
+        </SingleElement>
         }
         keyExtractor={item => item.id}
       />
