@@ -17,7 +17,7 @@ class DishesContainer extends React.Component {
     render(){
         
         return(
-           <DishesPresentational Dishes={this.state.Dishes}/>
+           <DishesPresentational Dishes={this.state.Dishes} param={this.props.match.params['dish']}/>
         )
     }
 }

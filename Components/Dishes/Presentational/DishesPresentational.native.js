@@ -1,8 +1,9 @@
 import React from 'react'
 import { View,Text,FlatList} from 'react-native'
+import {Link} from 'react-router-native'
 import { Price,Cost,Name,NameAndDescription,Description,SingleElement,Heading,HeadingStyle,Icon} from './DishesStyled';
 const DishesPresentational = (props) =>{
-    console.log(props);
+   
     
     return(
       <View>
@@ -10,7 +11,7 @@ const DishesPresentational = (props) =>{
         <FlatList
         data={props.Dishes}
         renderItem={({ item }) =>
-        <SingleElement>
+        <Link to={`${props.param}/${item.name}`}><SingleElement>
         <Icon  source={{uri:item.image}}></Icon>
         <NameAndDescription>
         <Name>{item.name}</Name>
@@ -21,7 +22,7 @@ const DishesPresentational = (props) =>{
           ${item.price}
           </Price>
         </Cost>
-        </SingleElement>
+        </SingleElement></Link>
         }
         keyExtractor={item => item.id}
       />
