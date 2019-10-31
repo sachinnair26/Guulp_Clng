@@ -5,7 +5,8 @@ class SelectedDishContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected_dish: {}
+            selected_dish: {},
+            count:1
         }
     }
    
@@ -19,10 +20,15 @@ class SelectedDishContainer extends Component {
             })
         }
     }
+changeCount = (value) =>{
+    this.setState({count:value ==='inc'? this.state.count+1 : this.state.count-1})
+}
     render() {
 
         return (
-            <SelectedDishPresentational selected_dish={this.state.selected_dish}  />
+            <SelectedDishPresentational selected_dish={this.state.selected_dish} count={this.state.count}  
+                changeCount={this.changeCount}
+            />
         )
     }
 }
