@@ -50,7 +50,7 @@ export const QuantitySelectorMain = styled.View `
 display:flex;
 flex-direction:row;
 align-self:center;
-margin:30px;
+margin:20px;
 `
 export const CountText = styled.Text `
 width:40px;
@@ -63,7 +63,7 @@ width:80%;
 align-self:center;
 background-color:green;
 padding:20px;
-margin:30px;
+margin:20px;
 `
 export const SingleSelectorValueSelected = styled.TouchableOpacity `
 margin:2px;
@@ -79,5 +79,5 @@ width:100%;
 display:flex;
 justify-content:space-between;
 flex-direction:row;
-padding:10px;
+padding:5px;
 `

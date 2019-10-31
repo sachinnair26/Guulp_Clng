@@ -15,7 +15,6 @@ class DishesContainer extends React.Component {
         
     }
     render(){
-        console.log(this.props)
         return(
            <DishesPresentational 
            Dishes={this.state.Dishes} 

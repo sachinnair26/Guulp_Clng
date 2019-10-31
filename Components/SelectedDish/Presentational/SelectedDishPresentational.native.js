@@ -10,7 +10,7 @@ const SelectedDishPresentational = (props) =>{
         <CarouselElement image={props.selected_dish['image']}/>
         <DishDetails {...props}/>
         <QuantitySelector count={props.count} changeCount={props.changeCount}/>
-        <AddToCartButton><Text style={{textAlign:"center",color:'#fff'}}>Add To Cart</Text></AddToCartButton>
+        <AddToCartButton onPress={props.onClickAddToCartButton}><Text style={{textAlign:"center",color:'#fff'}}>Add To Cart</Text></AddToCartButton>
         </SelectorPageMain>
     )
 }
