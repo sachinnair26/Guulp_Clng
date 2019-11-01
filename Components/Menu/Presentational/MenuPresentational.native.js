@@ -1,11 +1,18 @@
 import React from 'react';
-import { View, Text,ScrollView,StyleSheet,Image,TouchableOpacity } from 'react-native';
+import { View, Text,ScrollView,StyleSheet,Image,TouchableOpacity,ActivityIndicator,Dimensions } from 'react-native';
 import {Link} from 'react-router-native'
+const {width,height} = Dimensions.get('window')
 import { Heading, HeadingStyle, Cover,WholeMenu, SingleCard, MenuItem, Cart } from './MenuStyled';
 
 const MenuPresentational = (props) => {
     return (
-        <ScrollView>
+        <ScrollView >
+        {props.loading ?
+         <View style={{display:"flex",flex:1,justifyContent:"center",alignItems:"center",height:height}}>
+        <ActivityIndicator size="large" color="#0000ff" /> 
+        </View> 
+        :
+        <View>
             <Heading>
             <HeadingStyle>Menu</HeadingStyle>
             <TouchableOpacity onPress={()=>{props.history.push('/cart')}}><Cart source={{uri: 'asset:/shopping-cart.png'}}/></TouchableOpacity>
@@ -20,6 +27,8 @@ const MenuPresentational = (props) => {
                   </Link>
                 ))}
             </WholeMenu>
+        </View>
+        }
         </ScrollView>
     )
 }
