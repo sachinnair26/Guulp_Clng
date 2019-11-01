@@ -1,4 +1,4 @@
-import {ADD_TO_CART} from '../ActionCreators';
+import {ADD_TO_CART,REMOVE_FROM_CART} from '../ActionCreators';
 
 const initialState = {
     cart:[]
@@ -10,6 +10,12 @@ export default function AddToCartReducer(state=initialState,action){
                     
             return {
                 ...state,cart
+            }
+        case REMOVE_FROM_CART:
+            var cart = [...state['cart']]
+            cart.splice(action.index,1)
+            return  {
+                ...state,cart  
             }
         default:
             return state

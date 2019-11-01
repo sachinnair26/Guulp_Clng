@@ -3,7 +3,7 @@ import styled from 'styled-components/native'
 export const SingleElement = styled.TouchableOpacity `
 width:100%;
 background-color:#fffdd0;
-padding:6px;
+padding:2px;
 margin-top:1px;
 display:flex;
 flex-direction:row;
@@ -57,5 +57,11 @@ color:grey;
 export const Cart = styled.Image `
 width:20px;
 height:20px;
+
+`
+export const Cross = styled.Image `
+width:20px;
+height:20px;
+
 
 `
