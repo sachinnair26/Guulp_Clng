@@ -3,6 +3,7 @@ import {NativeRouter as Router,Switch,Route,Link,BackButton} from 'react-router-
 import Menu from '../Menu';
 import Dishes from '../Dishes';
 import SelectedDish from '../SelectedDish';
+import Cart from '../Cart';
 function Routes(){
     
     return(
@@ -10,6 +11,7 @@ function Routes(){
          <BackButton>
 
             <Switch>
+                <Route path='/cart' component={Cart}/>
                 <Route path='/:dish/:name' component={SelectedDish}/>
                 <Route path='/:dish' component={Dishes}/>
                 <Route path='/' component={Menu}/>

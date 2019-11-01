@@ -15,7 +15,8 @@ width:100%;
 background-color:red;
 display:flex;
 align-items:center;
-justify-content:center;
+flex-direction:row;
+justify-content:space-between;
 `
 export const HeadingStyle = styled.Text `
 font-size:20px;
@@ -42,4 +43,10 @@ color:#fff;
 padding:10px;
 font-size:18px;
 font-weight:bold;
+`
+
+export const Cart = styled.Image `
+width:20px;
+height:20px;
+
 `

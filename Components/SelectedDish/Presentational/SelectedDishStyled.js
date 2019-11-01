@@ -81,3 +81,8 @@ justify-content:space-between;
 flex-direction:row;
 padding:5px;
 `
+export const Cart = styled.Image `
+width:20px;
+height:20px;
+margin:4px;
+`

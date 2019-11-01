@@ -1,13 +1,16 @@
 import React from 'react';
-import { SelectorValues, SingleSelectorValue, SelectorPageMain,Price,SingleSelectorValueSelected, ExtraHeading, DishName, Description, NameAndPrice } from './SelectedDishStyled';
-import { View, Text } from 'react-native';
+import { SelectorValues, SingleSelectorValue,Cart ,SelectorPageMain,Price,SingleSelectorValueSelected, ExtraHeading, DishName, Description, NameAndPrice } from './SelectedDishStyled';
+import { View, Text,TouchableOpacity } from 'react-native';
 
 const DishDetails = (props) => {
     return (
         <View>
             <NameAndPrice>
             <DishName>{props.selected_dish.name}</DishName>
+            <View style={{display:"flex",flexDirection:'row'}}>
             <Price>${props.price}</Price>
+            <TouchableOpacity onPress={()=>{props.history.push('/cart')}}><Cart source={{uri: 'asset:/shopping-cart.png'}}/></TouchableOpacity>
+            </View>
             </NameAndPrice>
             <Description>{props.selected_dish.description}</Description>
             <SelectorValues>

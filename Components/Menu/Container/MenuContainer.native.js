@@ -15,7 +15,7 @@ class MenuContainer extends React.Component {
     render() {
         return (
 
-            <MenuPresentational menu={this.props.menu} />
+            <MenuPresentational menu={this.props.menu} history={this.props.history}/>
         )
     }
 }

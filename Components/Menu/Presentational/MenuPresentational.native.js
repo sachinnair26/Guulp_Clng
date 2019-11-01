@@ -1,12 +1,15 @@
 import React from 'react';
-import { View, Text,ScrollView,StyleSheet } from 'react-native';
+import { View, Text,ScrollView,StyleSheet,Image,TouchableOpacity } from 'react-native';
 import {Link} from 'react-router-native'
-import { Heading, HeadingStyle, Cover,WholeMenu, SingleCard, MenuItem } from './MenuStyled';
+import { Heading, HeadingStyle, Cover,WholeMenu, SingleCard, MenuItem, Cart } from './MenuStyled';
 
 const MenuPresentational = (props) => {
     return (
         <ScrollView>
-            <Heading><HeadingStyle>Menu</HeadingStyle></Heading>
+            <Heading>
+            <HeadingStyle>Menu</HeadingStyle>
+            <TouchableOpacity onPress={()=>{props.history.push('/cart')}}><Cart source={{uri: 'asset:/shopping-cart.png'}}/></TouchableOpacity>
+            </Heading>
             <WholeMenu>
                 {Object.keys(props.menu).map(single_menu => (
                   <Link to={'/'+single_menu} style={styles.Link}>

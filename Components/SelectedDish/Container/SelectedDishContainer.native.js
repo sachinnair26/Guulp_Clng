@@ -82,6 +82,7 @@ class SelectedDishContainer extends Component {
                 onChangeAddon={this.onChangeAddon}
                 onChangeSize={this.onChangeSize}
                 onClickAddToCartButton={this.onClickAddToCartButton}
+                history={this.props.history}
             />
         )
     }
